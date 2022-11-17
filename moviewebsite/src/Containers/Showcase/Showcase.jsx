@@ -36,6 +36,18 @@ const Showcase = () => {
             );
     }
 
+    const triggerMovieDetails = (movie) => {
+        /* TO-DO
+            On movie click, show detailed information for the user to view on the movie selected
+            Name;
+            Rating;
+            Date launched;
+            Image;
+            genres;
+            vote count;
+        */
+    }
+
     if(movies.length > 0){
 
         //We are going to render characters
@@ -68,7 +80,7 @@ const Showcase = () => {
 
                             // We are passing the character detail component the choosen character
                             moviesPerCategory.map(movie => {
-                                return <div id={movie.id} key={movie.id} className='moviePerCategory'>
+                                return <div id={movie.id} key={movie.id} className='moviePerCategory' onClick={()=>triggerMovieDetails(movie)}>
                                     <div className="imageContainer"><img className="imageMovie" src={"https://image.tmdb.org/t/p/w500"+movie.poster_path} alt={movie.name}/></div>
                                     <div>{movie.title}</div>
                                     <div>{movie.vote_average}</div>
