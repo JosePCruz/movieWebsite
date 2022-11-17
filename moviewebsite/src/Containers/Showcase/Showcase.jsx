@@ -12,8 +12,6 @@ const Showcase = () => {
     const [choosen, setChoosen] = useState('');
     const [moviesPerCategory, setMoviesPerCategory] = useState([]);
 
-    const [category, setCategory] = useState([]);
-
     useEffect(()=>{
 
         setTimeout(()=>{
@@ -31,7 +29,6 @@ const Showcase = () => {
     const selectMovie = (movie) => {
 
         //I set the hook with the chosen character
-        setCategory(movie.name);
         setChoosen(movie);
 
         bringMovieType(movie.id).then(
@@ -45,7 +42,7 @@ const Showcase = () => {
 
         return(
             <div className="mainDiv">
-                <div className="currentCategory" onClick={()=>setCategory()}>Category: {""+category}</div> 
+                <div className="currentCategory">Category: {choosen.name ? choosen.name : "Not Selected"}</div> 
 
                 <div className='categoryShowcase'>
                     {/*We are going to map the hook which contains the characters*/}
