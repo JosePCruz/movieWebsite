@@ -42,7 +42,10 @@ const Showcase = () => {
 
         return(
             <div className="mainDiv">
+                <div className="topBar">
                 <div className="currentCategory">Category: {choosen.name ? choosen.name : "Not Selected"}</div> 
+                    <div className="searchBar">Search Bar</div>
+                </div>
 
                 <div className='categoryShowcase'>
                     {/*We are going to map the hook which contains the characters*/}

@@ -5,16 +5,31 @@
     background-color: darkcyan;
 }
 
+.topBar{
+    background-color: darkcyan;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .currentCategory{
-    width: fit-content;
-    height: fit-content;
+    width: 5vw;
+    height: 2vw;
     
     background-color: darkcyan;
 
-    padding-left: 1vw;
-    padding-top: 3vw;
+    padding-left: 3vw;
+    padding-top: 1vw;
 
     color: white;
+}
+
+.searchBar{
+    
+    height: 2vw;
+    width: 95vw;
 }
 
 .homeLoadingDesign {
