@@ -12,6 +12,8 @@ const Showcase = () => {
     const [choosen, setChoosen] = useState('');
     const [moviesPerCategory, setMoviesPerCategory] = useState([]);
 
+    const [category, setCategory] = useState([]);
+
     useEffect(()=>{
 
         setTimeout(()=>{
@@ -29,7 +31,7 @@ const Showcase = () => {
     const selectMovie = (movie) => {
 
         //I set the hook with the chosen character
-
+        setCategory(movie.name);
         setChoosen(movie);
 
         bringMovieType(movie.id).then(
@@ -42,38 +44,42 @@ const Showcase = () => {
         //We are going to render characters
 
         return(
-            <div className='charactersShowcase'>
-                {/*We are going to map the hook which contains the characters*/}
-                
-                <div className='leftSide'>
-                {
-                    movies.map(movie => {
-                        return <div  onClick={()=>selectMovie(movie)} className='personDesign' key={movie.id}>
-                            <div>{movie.name}</div>
-                        </div>
-                    })
-                }
+            <div className="mainDiv">
+                <div className="currentCategory" onClick={()=>setCategory()}>Category: {""+category}</div> 
 
-                </div>
-
-                <div className='rightSide'>
-                    {/*Conditional rendering...*/}
-
+                <div className='categoryShowcase'>
+                    {/*We are going to map the hook which contains the characters*/}
+                    <div className='leftSide' id='category'>
                     {
-                        choosen.id !== undefined &&
-
-                        // We are passing the character detail component the choosen character
-                        moviesPerCategory.map(movie => {
-                            return <div key={movie.id} className='moviePerCategory'>
-                                <div>{movie.title}</div>
-                                <div>{movie.vote_count}</div>
+                        movies.map(movie => {
+                            return <div  onClick={()=>selectMovie(movie)} className='movieCategory' key={movie.id}>
+                                <div>{movie.name}</div>
                             </div>
                         })
                     }
 
-                </div>
-                
+                    </div>
 
+                    <div className='rightSide'>
+                        {/*Conditional rendering...*/}
+
+                        {
+                            choosen.id !== undefined &&
+
+                            // We are passing the character detail component the choosen character
+                            moviesPerCategory.map(movie => {
+                                return <div id={movie.id} key={movie.id} className='moviePerCategory'>
+                                    <div className="imageContainer"><img className="imageMovie" src={"https://image.tmdb.org/t/p/w500"+movie.poster_path} alt={movie.name}/></div>
+                                    <div>{movie.title}</div>
+                                    <div>{movie.vote_average}</div>
+                                </div>
+                            })
+                        }
+
+                    </div>
+                    
+
+                </div>
             </div>
         )
 

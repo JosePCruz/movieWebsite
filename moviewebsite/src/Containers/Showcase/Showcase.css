@@ -1,3 +1,22 @@
+.mainDiv{
+    width: 100vw;
+    height: 50vw;
+
+    background-color: darkcyan;
+}
+
+.currentCategory{
+    width: fit-content;
+    height: fit-content;
+    
+    background-color: darkcyan;
+
+    padding-left: 1vw;
+    padding-top: 3vw;
+
+    color: white;
+}
+
 .homeLoadingDesign {
 
     height: 100vh;
@@ -20,7 +39,7 @@
     width: 8em;
 }
 
-.charactersShowcase {
+.categoryShowcase {
     
     height: 100vh;
     width: 100vw;
@@ -30,13 +49,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: top;
 
     color: white;
 }
 
-.personDesign {
-    height: 10em;
+.movieCategory {
+    height: 3em;
     width: 7em;
 
     display: flex;
@@ -44,37 +63,47 @@
     justify-content: center;
     align-items: center;
 
-    transition: 0.5s;
+    transition: 0.2s;
 
     cursor: pointer;
 }
 
-.personDesign:hover{
+.movieCategory:hover{
 
-    transition: 0.5s;
+    transition: 0.2s;
    
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 
-.personPic {
-    height: 6em;
-}
-
 .leftSide {
 
-    width: 50vw;
+    width: 10vw;
+    height: 40vw;
+    overflow: auto;
 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-
-
-
+    display: block;
+    padding-left: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 }
 
 .rightSide {
-    width: 50vw;
+    width: 90vw;
+    height: 45vw;
+    overflow: auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-right: 2vw;
 }
 
 .moviePerCategory{
     color: black;
+    margin-bottom: 2vw;
+}
+
+.imageMovie{
+    
+    width: 7vw;
+    height: 10vw;
 }
