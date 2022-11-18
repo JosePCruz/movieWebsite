@@ -1,6 +1,6 @@
 .mainDiv{
     width: 100vw;
-    height: 50vw;
+    height: 50vh;
 
     background-color: darkcyan;
 }
@@ -16,7 +16,7 @@
 
 .currentCategory{
     width: 5vw;
-    height: 2vw;
+    height: 2vh;
     
     background-color: darkcyan;
 
@@ -28,7 +28,7 @@
 
 .searchBar{
     
-    height: 2vw;
+    height: 2vh;
     width: 95vw;
 }
 
@@ -93,7 +93,7 @@
 .leftSide {
 
     width: 10vw;
-    height: 40vw;
+    height: 40vh;
     overflow: auto;
 
     display: block;
@@ -120,5 +120,5 @@
 .imageMovie{
     
     width: 7vw;
-    height: 10vw;
+    height: 10vh;
 }

@@ -1,0 +1,38 @@
+.registerCardDesign{
+
+    height: 75vh;
+    width: 30vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: whitesmoke;
+    border-radius: 10%;
+
+}
+
+.registerCardUp{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.registerCardMiddle{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.registerCardBottom{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
