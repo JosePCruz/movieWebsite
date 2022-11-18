@@ -29,6 +29,14 @@
     justify-content: center;
 }
 
+.logoDesign{
+
+    height: 5em;
+    width: 10em;
+
+    padding-bottom: 3em;
+}
+
 .registerCardBottom{
     
     display: flex;

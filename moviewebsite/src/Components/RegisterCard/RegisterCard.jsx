@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import {errorCheck} from '../../Services/useful';
 import './RegisterCard.css';
 
+import logo from '../../Images/kununu-logo-vector.png';
+
 const RegisterCard = () => {
 
     const [user,setState] = useState({
@@ -20,7 +22,7 @@ const RegisterCard = () => {
 
         <div className="registerCardDesign">
             <div className="registerCardUp">
-                {/*<img className='logoDesign' src=logo></img>*/}
+                <img className='logoDesign' src={logo}></img>
             </div>
             <div className="registerCardMiddle">
 
